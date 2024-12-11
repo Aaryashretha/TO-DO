@@ -1,0 +1,10 @@
+<h1>TO DO LIST:</h1>
+<a href="/create/"><button>Create</button></a>
+{% for todo in todos %}
+    <p>
+        {{todo.title}}
+        <br/>
+    <a href="/update/{{todo.pk}}/"><button>Update</button></a>
+    <a href="/delete/{{todo.pk}}/"><button>Delete</button></a>
+    </p>
+{% endfor %}

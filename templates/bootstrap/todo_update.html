@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html"%}
+{% block content %}
+<div class="row">
+    <div class="col">
+     <form action="" method="post">
+         {% csrf_token %}
+         <div class="mb-3">
+             <label for="title" class="form-label">Todo update</label>
+             <input type="text" class="form-control" id="title" name="title" value="{{todo.title}}"/>
+         </div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+    </div>
+ </div>
+{% endblock content %}
